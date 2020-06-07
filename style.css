@@ -1,0 +1,61 @@
+header {
+	height: 10rem;
+	background-color: #3390D3;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+body {
+	margin: 0;
+	background-color: #EFF2F5;
+}
+main {
+	background-color: white;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	border-radius: 10px;
+	padding: 2rem;
+	position: relative;
+	top: -1.5rem;
+}
+h1 {
+	margin-top: 0;
+	text-align: center;
+}
+.options {
+	display: flex;
+	justify-content: space-between;
+}
+.selection {
+	display: flex;
+}
+
+#objective-button {
+	background-color: #3390D3;
+}
+#update-button {
+	background-color: #AE1140;
+}
+
+@media only screen and (max-width: 544px) {
+	td, th {
+		display: block;
+	}
+	td > button {
+		width: 100%;
+	}
+	thead {
+		display: none;
+	}
+	#subject-select {
+		width: 100%;
+	}
+	.options {
+		flex-direction: column;
+	}
+	.actions > button {
+		width: 100%;
+	}
+}

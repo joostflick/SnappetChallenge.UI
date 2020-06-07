@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Snappet Challenge</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<p class="path">Dashboard / Snappet /</p>
+		<h1>Front-End Challenge</h1>
+	</header>
+	<main>
+		<div class="options">
+			<div class="selection">
+				<button>
+					1
+				</button>
+				<button>
+					2
+				</button>
+				<select name="subject" id="subject-select">
+					<option value="volvo" selected>Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="mercedes">Mercedes</option>
+					<option value="audi">Audi</option>
+				</select>
+			</div>
+			<div class="actions">
+				<button id="objective-button">Add learning objective +</button>
+				<button id="update-button">Automatic update +</button>
+			</div>
+		</div>
+		<table id="table">
+			<thead>
+				<tr>
+					<th>Learning objective</th>
+					<th>Pupils</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</main>
+</body>
+<script src="index.js"></script>
+</html>
