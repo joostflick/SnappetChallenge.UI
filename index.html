@@ -10,33 +10,38 @@
 <body>
 	<header>
 		<p class="path">Dashboard / Snappet /</p>
-		<h1>Front-End Challenge</h1>
+		<div class="title">
+			<img class="icon" src="./assets/icons/gift.svg" alt="gift icon">
+			<h1>Front-End Challenge</h1>
+		</div>
 	</header>
 	<main>
 		<div class="options">
 			<div class="selection">
 				<button>
-					1
+					<img class="icon" src="./assets/icons/balls.svg" alt="balls icon">
 				</button>
 				<button>
-					2
+					<img class="icon" src="./assets/icons/person.svg" alt="person icon">
 				</button>
-				<select name="subject" id="subject-select">
-					<option value="volvo" selected>Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="mercedes">Mercedes</option>
-					<option value="audi">Audi</option>
-				</select>
+				<div class="dropdown">
+					<button onclick="openDropdown()" id="dropdown-button">Math grade 5 <img class="icon" src="./assets/icons/down.svg" alt="down icon"></button>
+					<div id="dropdown-content" class="dropdown-content">
+						<button onClick="showContent(4)">Math grade 4</button>
+						<button onClick="showContent(3)">Math grade 3</button>
+						<button onClick="showContent(2)">Math grade 2</button>
+					</div>
+				</div>
 			</div>
 			<div class="actions">
-				<button id="objective-button">Add learning objective +</button>
-				<button id="update-button">Automatic update +</button>
+				<button id="objective-button">Add learning objective <img class="icon" src="./assets/icons/plus.svg" alt="plus icon"></button>
+				<button id="update-button">Automatic update <img class="icon" src="./assets/icons/refresh.svg" alt="refresh icon"></button>
 			</div>
 		</div>
 		<table id="table">
 			<thead>
 				<tr>
-					<th>Learning objective</th>
+					<th>Learning objective <img class="icon" src="./assets/icons/down.svg" alt="down icon"></th>
 					<th>Pupils</th>
 				</tr>
 			</thead>
