@@ -1,6 +1,12 @@
+/* Variables */
+:root {
+	--main-blue: #3390D3;
+	--main-red: #AE1140;
+}
+
 header {
 	height: 10rem;
-	background-color: #3390D3;
+	background-color: var(--main-blue);
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -8,6 +14,7 @@ header {
 	align-items: center;
 }
 body {
+	font-family: sans-serif;
 	margin: 0;
 	background-color: #EFF2F5;
 }
@@ -24,6 +31,29 @@ h1 {
 	margin-top: 0;
 	text-align: center;
 }
+th {
+	text-align: left;
+}
+td {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+tr > td:first-child {
+	width: 50%;
+}
+tr > td:last-child {
+	display: flex;
+	justify-content: flex-end;
+}
+td > button {
+	color: var(--main-blue);
+}
+button {
+	height: 2rem;
+	border-radius: 3px;
+	background-color: white;
+}
+
 .options {
 	display: flex;
 	justify-content: space-between;
@@ -31,19 +61,57 @@ h1 {
 .selection {
 	display: flex;
 }
+.selection > button:hover {
+	background-color: var(--main-blue);
+}
+.icon {
+	height: 1rem;
+	width: 1rem;
+}
+.title > .icon {
+	height: 2rem;
+	width: 2rem;
+}
+.title {
+	display: flex;
+}
+.actions {
+	display: flex;
+}
+.actions > button {
+	border: none;
+	color: white;
+	font-size: 12px;
+	display: flex;
+	margin-left: 1rem;
+	justify-content: center;
+}
 
+#subject-select{
+	height: 100%;
+}
 #objective-button {
-	background-color: #3390D3;
+	background-color: var(--main-blue);
 }
 #update-button {
-	background-color: #AE1140;
+	background-color: var(--main-red);
 }
-
+#table {
+	width: 100%;
+	margin-top: 1rem;
+}
+/* Mediaquery for mobile */
 @media only screen and (max-width: 544px) {
+	td {
+		padding: initial;
+	}
 	td, th {
 		display: block;
 	}
 	td > button {
+		width: 100%;
+	}
+	tr > td:first-child {
 		width: 100%;
 	}
 	thead {
@@ -55,7 +123,51 @@ h1 {
 	.options {
 		flex-direction: column;
 	}
+	.actions {
+		flex-direction: column-reverse;
+	}
 	.actions > button {
 		width: 100%;
+		margin-left: 0;
+		margin-top: 0.5rem;
 	}
+}
+/* CSS for the dropdown menu */
+#dropdown-button {
+	display: flex;
+	cursor: pointer;
+}
+
+#dropdown-button:hover, #dropdown-button:focus {
+	background-color: var(--main-blue);
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/* Buttons in the dropdown */
+.dropdown-content button {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+}
+
+.dropdown-content button:hover {
+	background-color: var(--main-blue)
+}
+
+.show {
+	display:block;
 }
